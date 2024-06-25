@@ -1,10 +1,10 @@
 const db = require('../config/connection');
 
-const addProduct = (userId, productName, productDesc, price) => {
+const addPost = (user_id, caption) => {
   return new Promise((resolve, reject) => {
     db.query(
-      'INSERT INTO products (user_id, product_name, product_desc, price) VALUES (?, ?, ?, ?)',
-      [userId, productName, productDesc, price],
+      'INSERT INTO products (user_id, caption) VALUES (?, ?)',
+      [user_id, caption],
       (err, result) => {
         if (err) {
           reject(err);
@@ -17,5 +17,5 @@ const addProduct = (userId, productName, productDesc, price) => {
 };
 
 module.exports = {
-  addProduct,
+  addPost,
 };

@@ -35,14 +35,14 @@ const Home = () => {
     }
   };
 
-  const handleAddProduct = () => {
-    navigate("/add-product");
+  const handleAddPost = () => {
+    navigate("/add-post");
   };
 
   return (
     <div>
       <h1>Home</h1>
-      <button onClick={handleAddProduct}>Add Product</button>
+      <button onClick={handleAddPost}>Add Post</button>
       <button onClick={handleLogout}>Logout</button>
     </div>
   );

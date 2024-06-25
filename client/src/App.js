@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Login from './pages/Auth/Login';
 import Register from './pages/Auth/Register';
 import Home from './pages/Home';
-import AddProduct from './pages/AddProduct';
+import AddPost from './pages/AddPost';
 import PageNotFound from './pages/404';
 
 const App = () => (
@@ -14,7 +14,7 @@ const App = () => (
         <Route index element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="home" element={<Home />} />
-        <Route path="add-product" element={<AddProduct />} />
+        <Route path="add-post" element={<AddPost />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>

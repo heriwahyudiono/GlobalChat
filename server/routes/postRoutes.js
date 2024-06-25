@@ -1,5 +1,5 @@
 const express = require('express');
-const productController = require('../controllers/productController');
+const postController = require('../controllers/postController');
 const authenticationMiddleware = require('../middleware/authenticationMiddleware');
 
 const router = express.Router();
@@ -7,7 +7,7 @@ const router = express.Router();
 router.post(
   '/add',
   authenticationMiddleware.authenticateToken,
-  productController.addProduct
+  postController.addPost
 );
 
 module.exports = router;
