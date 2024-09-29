@@ -15,6 +15,18 @@ const addPost = async (req, res) => {
   }
 };
 
+const getPosts = async (req, res) => {
+  try {
+    const posts = await postModel.getPosts();
+
+    return responseUtils.sendSuccess(res, "Berhasil mendapatkan postingan", posts);
+  } catch (error) {
+    console.error(error);
+    return responseUtils.sendError(res, 500, "Gagal mendapatkan postingan");
+  }
+};
+
 module.exports = {
   addPost,
+  getPosts,
 };

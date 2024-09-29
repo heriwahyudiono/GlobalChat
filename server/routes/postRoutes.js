@@ -10,4 +10,10 @@ router.post(
   postController.addPost
 );
 
+router.get(
+  '/all',
+  authenticationMiddleware.authenticateToken,
+  postController.getPosts
+);
+
 module.exports = router;
